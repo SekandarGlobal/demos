@@ -24,7 +24,7 @@ export default function Contact() {
   };
 
   const selectClasses =
-    "w-full bg-dark-900/50 border border-white/10 rounded-xl px-5 py-3.5 text-white focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/20 transition-all duration-300 appearance-none";
+    "select-arrow w-full bg-dark-900/50 border border-white/10 rounded-xl px-5 py-3.5 text-white focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/20 transition-all duration-300";
 
   return (
     <section id="contact" className="relative py-24 md:py-32 bg-dark-950 overflow-hidden">

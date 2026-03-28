@@ -180,10 +180,10 @@ export default function Testimonials() {
                         }, 300);
                       }
                     }}
-                    className={`h-1 rounded-full transition-all duration-500 ${
+                    className={`h-2.5 rounded-full transition-all duration-500 ${
                       index === active
                         ? "w-10 bg-gold-500"
-                        : "w-3 bg-white/15 hover:bg-white/30"
+                        : "w-2.5 bg-white/15 hover:bg-white/30"
                     }`}
                     aria-label={`Go to testimonial ${index + 1}`}
                   />

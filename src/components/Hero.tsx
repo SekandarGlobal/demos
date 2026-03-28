@@ -60,8 +60,9 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full glass-gold mb-8">
             <span className="w-2 h-2 rounded-full bg-gold-400 animate-pulse" />
-            <span className="text-gold-300 text-sm tracking-widest uppercase">
-              Est. 1991 &middot; Licensed in NY, CA, FL, CT &middot; Monaco &middot; UAE
+            <span className="text-gold-300 text-xs sm:text-sm tracking-widest uppercase">
+              <span className="hidden sm:inline">Est. 1991 &middot; Licensed in NY, CA, FL, CT &middot; Monaco &middot; UAE</span>
+              <span className="sm:hidden">Est. 1991 &middot; NY &middot; CA &middot; Monaco &middot; Dubai</span>
             </span>
           </div>
         </div>

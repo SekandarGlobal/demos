@@ -160,7 +160,7 @@ export default function Properties() {
                   {property.lifestyle}
                 </p>
 
-                <div className="flex items-center gap-6 pt-4 border-t border-white/5 mb-5">
+                <div className="flex items-center flex-wrap gap-x-6 gap-y-2 pt-4 border-t border-white/5 mb-5">
                   <div className="flex items-center gap-2 text-white/50 text-sm">
                     <svg
                       className="w-4 h-4"

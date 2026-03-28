@@ -120,7 +120,7 @@ export default function Agents() {
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/40 to-transparent" />
 
                   {/* Social links overlay */}
-                  <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute top-4 right-4 flex gap-2 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
                     <a
                       href={agent.social.linkedin}
                       className="w-9 h-9 rounded-full glass flex items-center justify-center text-white/60 hover:text-gold-400 hover:bg-white/10 transition-all duration-300"

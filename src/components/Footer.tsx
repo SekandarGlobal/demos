@@ -121,26 +121,26 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/30 text-sm">
+          <p className="text-white/30 text-xs sm:text-sm text-center md:text-left">
             &copy; {currentYear} Aurelius Estates LLC. All rights reserved. All information
             deemed reliable but not guaranteed.
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4 sm:gap-6">
             <a
               href="#"
-              className="text-white/30 text-sm hover:text-white/60 transition-colors duration-300"
+              className="text-white/30 text-xs sm:text-sm hover:text-white/60 transition-colors duration-300"
             >
               Privacy Policy
             </a>
             <a
               href="#"
-              className="text-white/30 text-sm hover:text-white/60 transition-colors duration-300"
+              className="text-white/30 text-xs sm:text-sm hover:text-white/60 transition-colors duration-300"
             >
-              Terms of Service
+              Terms
             </a>
             <a
               href="#"
-              className="text-white/30 text-sm hover:text-white/60 transition-colors duration-300"
+              className="text-white/30 text-xs sm:text-sm hover:text-white/60 transition-colors duration-300"
             >
               NDA
             </a>
