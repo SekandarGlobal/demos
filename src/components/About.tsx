@@ -86,11 +86,24 @@ export default function About() {
                 advisor for the world&apos;s most discerning buyers. We don&apos;t
                 just sell properties &mdash; we curate legacies.
               </p>
-              <p className="text-white/40 leading-relaxed">
+              <p className="text-white/40 leading-relaxed mb-6">
                 Our portfolio represents less than 1% of properties that apply
                 for representation. Each home is selected for its architectural
                 significance, location prestige, and enduring value.
               </p>
+
+              {/* Brand philosophy */}
+              <div className="glass-gold rounded-xl p-6 mt-8">
+                <p className="text-gold-300/80 text-sm leading-relaxed italic font-display">
+                  &ldquo;I founded Aurelius on a simple belief: the right home
+                  doesn&apos;t just shelter a family &mdash; it defines a
+                  generation. We represent buyers who understand that, and
+                  properties worthy of it.&rdquo;
+                </p>
+                <p className="text-gold-400/60 text-xs mt-3 tracking-wider uppercase">
+                  &mdash; Marcus R. Thornton, Founding Director, 1991
+                </p>
+              </div>
             </div>
           </ScrollReveal>
 
@@ -107,10 +120,10 @@ export default function About() {
               </div>
               <div className="absolute -bottom-6 -left-6 glass-gold rounded-xl p-6 animate-float">
                 <div className="font-display text-3xl font-bold text-gradient">
-                  35+
+                  34
                 </div>
                 <div className="text-white/50 text-sm">
-                  Years of Excellence
+                  Years in Operation
                 </div>
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-gold-500/10 rounded-full blur-2xl" />

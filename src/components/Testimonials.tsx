@@ -6,53 +6,63 @@ import ScrollReveal from "./ScrollReveal";
 const testimonials = [
   {
     quote:
-      "Aurelius found us a home that wasn&apos;t even on the market. Their network is unlike anything I&apos;ve experienced. The entire process felt effortless.",
-    name: "Caroline Ashford",
-    title: "Managing Partner, Ashford Capital",
+      "We had three weeks before our relocation from Hong Kong. Aurelius arranged seven off-market viewings across Manhattan and closed on a full-floor unit at 432 Park — sight unseen from my wife, who trusted their judgment completely.",
+    name: "T. Nakamura",
+    title: "Family Office Principal",
     location: "New York, NY",
-    rating: 5,
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80",
-  },
-  {
-    quote:
-      "The level of discretion and professionalism is unmatched. They handled every detail of our Monaco acquisition with absolute precision. Truly world-class.",
-    name: "Richard Pemberton",
-    title: "Family Office Director",
-    location: "London, UK",
+    buyerType: "International Relocation",
+    propertyClass: "Manhattan Penthouse",
     rating: 5,
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80",
   },
   {
     quote:
-      "After two decades of working with luxury brokers across three continents, Aurelius stands alone. They don&apos;t just find properties — they find the right properties.",
-    name: "Mei-Lin Tanaka",
-    title: "Venture Capital Partner",
-    location: "San Francisco, CA",
-    rating: 5,
-    avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=80",
-  },
-  {
-    quote:
-      "We needed a waterfront estate in under 60 days. Aurelius delivered three options — each one exceeding our expectations. The closing was seamless.",
-    name: "Henrik Johansson",
-    title: "CEO, NordTech Industries",
-    location: "Stockholm, Sweden",
+      "After twenty years with the same London broker, I gave Aurelius a single mandate: find me a Côte d'Azur estate with a private harbor. They delivered three options in six weeks, each one exceptional. The one we chose wasn't even listed.",
+    name: "C. Hargrove",
+    title: "Private Investor",
+    location: "London, UK",
+    buyerType: "Secondary Residence",
+    propertyClass: "Mediterranean Estate",
     rating: 5,
     avatar:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&q=80",
   },
   {
     quote:
-      "They understood our family&apos;s needs intuitively. The Beverly Hills estate they secured for us wasn&apos;t just a house — it was exactly the lifestyle we envisioned.",
-    name: "Priya Kapoor-Williams",
-    title: "Film Producer & Entrepreneur",
-    location: "Los Angeles, CA",
+      "Discretion was non-negotiable for us. The entire acquisition — from first showing to closing — was handled under NDA. Our neighbors didn't know we'd moved until we invited them for dinner.",
+    name: "A. Chen & M. Park",
+    title: "Tech Founders",
+    location: "Atherton, CA",
+    buyerType: "Primary Residence",
+    propertyClass: "Bay Area Estate",
     rating: 5,
     avatar:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&q=80",
+  },
+  {
+    quote:
+      "I've bought properties in seven countries. Aurelius is the only firm where I felt the advisor genuinely understood what I was looking for before I could articulate it myself.",
+    name: "R. Lindqvist",
+    title: "Hedge Fund Managing Director",
+    location: "Stockholm & Dubai",
+    buyerType: "Portfolio Acquisition",
+    propertyClass: "Global Residential",
+    rating: 5,
+    avatar:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80",
+  },
+  {
+    quote:
+      "They found us a home that wasn&apos;t on the market. Their network is unlike anything I&apos;ve experienced — and the entire process from first call to closing took under 45 days.",
+    name: "S. Whitfield",
+    title: "Managing Partner, Whitfield Capital",
+    location: "Greenwich, CT",
+    buyerType: "Primary Residence",
+    propertyClass: "Connecticut Estate",
+    rating: 5,
+    avatar:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80",
   },
 ];
 
@@ -70,7 +80,7 @@ export default function Testimonials() {
   }, [isTransitioning]);
 
   useEffect(() => {
-    const interval = setInterval(next, 6000);
+    const interval = setInterval(next, 7000);
     return () => clearInterval(interval);
   }, [next]);
 
@@ -145,7 +155,11 @@ export default function Testimonials() {
                       {testimonials[active].name}
                     </p>
                     <p className="text-white/40 text-sm mt-1">
-                      {testimonials[active].title} &middot;{" "}
+                      {testimonials[active].title}
+                    </p>
+                    <p className="text-white/25 text-xs mt-1">
+                      {testimonials[active].buyerType} &middot;{" "}
+                      {testimonials[active].propertyClass} &middot;{" "}
                       {testimonials[active].location}
                     </p>
                   </div>

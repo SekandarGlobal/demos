@@ -2,10 +2,10 @@ import ScrollReveal from "./ScrollReveal";
 import AnimatedCounter from "./AnimatedCounter";
 
 const stats = [
-  { value: 2500, suffix: "+", label: "Properties Sold", decimals: 0 },
-  { value: 4.2, suffix: "B", label: "In Sales Volume", prefix: "$", decimals: 1 },
-  { value: 98, suffix: "%", label: "Client Satisfaction", decimals: 0 },
-  { value: 35, suffix: "+", label: "Years of Excellence", decimals: 0 },
+  { value: 1847, suffix: "", label: "Properties Sold Since 1991", decimals: 0 },
+  { value: 3.8, suffix: "B", label: "Closed Sales Volume", prefix: "$", decimals: 1 },
+  { value: 94, suffix: "%", label: "Repeat & Referral Clients", decimals: 0 },
+  { value: 34, suffix: "", label: "Years in Operation", decimals: 0 },
 ];
 
 export default function Stats() {

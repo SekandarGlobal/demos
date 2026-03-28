@@ -48,9 +48,9 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="btn-magnetic px-6 py-2.5 bg-gold-500/10 border border-gold-500/30 text-gold-400 text-sm rounded-full hover:bg-gold-500/20 hover:border-gold-400/50 transition-all duration-300 tracking-wide uppercase"
+            className="btn-magnetic px-6 py-2.5 bg-gold-500 text-dark-950 text-sm font-semibold rounded-full hover:bg-gold-400 transition-all duration-300 tracking-wide uppercase animate-pulse-glow"
           >
-            Book a Viewing
+            Schedule Consultation
           </a>
         </div>
 

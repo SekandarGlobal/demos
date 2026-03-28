@@ -2,49 +2,65 @@ import ScrollReveal from "./ScrollReveal";
 
 const agents = [
   {
-    name: "Sebastian Hartwell",
-    role: "Founding Director",
-    specialty: "Ultra-Luxury Penthouses & Estates",
-    bio: "With 18 years representing high-net-worth individuals, Sebastian has closed over $3.2B in transactions across New York, London, and the French Riviera.",
-    phone: "+1 (212) 555-0147",
-    email: "s.hartwell@aurelius.com",
-    sales: "$3.2B+",
+    name: "Marcus R. Thornton",
+    role: "Founding Director & Principal Broker",
+    license: "Licensed RE Broker, NY #10401327639",
+    specialty: "Ultra-Luxury Penthouses & Manhattan Townhouses",
+    bio: "Founded Aurelius Estates in 1991 after a decade at Sotheby's International Realty. Marcus has personally closed over $2.4B in transactions and maintains direct relationships with developers at every major supertall tower in Manhattan.",
+    office: "New York",
+    officeAddress: "432 Park Avenue, 85th Floor, New York, NY 10022",
+    phone: "+1 (212) 555-0142",
+    email: "m.thornton@aurelius-estates.com",
+    sales: "$2.4B",
+    certifications: ["Licensed RE Broker (NY, CT)", "Certified Luxury Home Marketing Specialist", "Institute for Luxury Home Marketing Member"],
     image:
       "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
     social: { linkedin: "#", instagram: "#" },
   },
   {
-    name: "Isabelle Moreau",
-    role: "Senior Advisor, Europe",
-    specialty: "European Châteaux & Coastal Villas",
-    bio: "A Monaco native with deep ties to European aristocracy, Isabelle specializes in heritage properties and off-market coastal estates across the Mediterranean.",
+    name: "Isabelle Fontaine-Duval",
+    role: "Senior Advisor, Europe & Mediterranean",
+    license: "Licensed Agent, Monaco",
+    specialty: "European Châteaux, Riviera Villas & London Townhouses",
+    bio: "Born in Monaco, educated at Sciences Po Paris. Isabelle spent eight years at Knight Frank's international desk before joining Aurelius in 2004. She maintains an off-market network spanning the French Riviera, Lake Como, and Mayfair.",
+    office: "Monaco",
+    officeAddress: "Le Mirabeau, 1 Avenue Princesse Grace, Monaco 98000",
     phone: "+377 93 50 12 34",
-    email: "i.moreau@aurelius.com",
-    sales: "$1.8B+",
+    email: "i.fontaine@aurelius-estates.com",
+    sales: "$1.8B",
+    certifications: ["Licensed Agent (Monaco)", "RICS Associate", "FNAIM International"],
     image:
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
     social: { linkedin: "#", instagram: "#" },
   },
   {
-    name: "Daniel Osei-Bonsu",
-    role: "Director, Middle East & Asia",
-    specialty: "Towers, Penthouses & New Development",
-    bio: "Daniel bridges East and West, connecting global investors with landmark developments in Dubai, Singapore, and Hong Kong. Fluent in four languages.",
+    name: "Daniel K. Adeyemi",
+    role: "Director, Middle East & Asia-Pacific",
+    license: "RERA Certified, Dubai",
+    specialty: "New Development, Branded Residences & Investment Acquisitions",
+    bio: "Daniel bridges East and West, connecting institutional and private investors with landmark developments across Dubai, Singapore, and Hong Kong. Fluent in English, Arabic, Mandarin, and French, he manages cross-border transactions for a global client base.",
+    office: "Dubai",
+    officeAddress: "Burj Khalifa District, Level 45, Dubai, UAE",
     phone: "+971 4 555 0193",
-    email: "d.osei-bonsu@aurelius.com",
-    sales: "$2.1B+",
+    email: "d.adeyemi@aurelius-estates.com",
+    sales: "$2.1B",
+    certifications: ["RERA Certified (Dubai)", "Certified International Property Specialist", "CEPI-CEI Member"],
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
     social: { linkedin: "#", instagram: "#" },
   },
   {
-    name: "Elena Vasquez",
-    role: "Lead Advisor, Americas",
-    specialty: "Waterfront & Ranch Properties",
-    bio: "From Malibu beachfronts to Montana ranches, Elena curates West Coast acquisitions for tech founders and entertainment industry executives.",
+    name: "Elena Castellanos-Vasquez",
+    role: "Lead Advisor, West Coast & Latin America",
+    license: "DRE Licensed, CA #02089145",
+    specialty: "Waterfront Estates, Malibu & Pacific Palisades",
+    bio: "Elena represents the entertainment industry's top directors, producers, and tech founders in their coastal acquisitions. A Malibu native, she has closed over 40 transactions along the Pacific Coast Highway corridor in the last decade alone.",
+    office: "Los Angeles",
+    officeAddress: "23733 Malibu Road, Suite 200, Malibu, CA 90265",
     phone: "+1 (310) 555-0261",
-    email: "e.vasquez@aurelius.com",
-    sales: "$1.5B+",
+    email: "e.vasquez@aurelius-estates.com",
+    sales: "$1.5B",
+    certifications: ["DRE Licensed (California)", "Certified Luxury Home Marketing Specialist", "NAR Member"],
     image:
       "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80",
     social: { linkedin: "#", instagram: "#" },
@@ -84,8 +100,9 @@ export default function Agents() {
             </h2>
             <div className="line-reveal h-px bg-gold-500/50 mx-auto" />
             <p className="text-white/40 text-lg max-w-2xl mx-auto mt-8">
-              Each advisor brings decades of expertise and an exclusive network
-              spanning the world&apos;s most coveted addresses.
+              Each advisor is a licensed professional with a minimum of 15 years
+              in ultra-luxury real estate and a verified track record of $1B+ in
+              closed transactions.
             </p>
           </div>
         </ScrollReveal>
@@ -123,7 +140,7 @@ export default function Agents() {
                   {/* Sales badge */}
                   <div className="absolute bottom-4 left-4 z-10">
                     <span className="px-3 py-1.5 bg-gold-500/90 text-dark-950 text-xs font-semibold rounded-full tracking-wider uppercase">
-                      {agent.sales} Sold
+                      {agent.sales} Career Volume
                     </span>
                   </div>
                 </div>
@@ -143,7 +160,19 @@ export default function Agents() {
                     {agent.bio}
                   </p>
 
+                  {/* Certifications */}
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {agent.certifications.map((cert, i) => (
+                      <span key={i} className="text-[10px] text-white/25 border border-white/10 rounded-full px-2.5 py-1 tracking-wide">
+                        {cert}
+                      </span>
+                    ))}
+                  </div>
+
                   <div className="mt-5 pt-5 border-t border-white/5 space-y-2">
+                    <p className="text-white/20 text-[10px] tracking-wider uppercase mb-2">
+                      {agent.office} Office &middot; {agent.license}
+                    </p>
                     <a
                       href={`mailto:${agent.email}`}
                       className="flex items-center gap-2 text-white/30 text-xs hover:text-gold-400 transition-colors duration-300"

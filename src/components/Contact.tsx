@@ -9,6 +9,10 @@ export default function Contact() {
     email: "",
     phone: "",
     budget: "",
+    location: "",
+    propertyType: "",
+    timeframe: "",
+    purpose: "",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -18,6 +22,9 @@ export default function Contact() {
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
   };
+
+  const selectClasses =
+    "w-full bg-dark-900/50 border border-white/10 rounded-xl px-5 py-3.5 text-white focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/20 transition-all duration-300 appearance-none";
 
   return (
     <section id="contact" className="relative py-24 md:py-32 bg-dark-950 overflow-hidden">
@@ -31,18 +38,18 @@ export default function Contact() {
           <ScrollReveal variant="left">
             <div>
               <span className="text-gold-400 text-sm tracking-[0.3em] uppercase">
-                Get in Touch
+                Begin Your Search
               </span>
               <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 mb-6 leading-tight">
-                <span className="text-gradient-white">Begin Your</span>
+                <span className="text-gradient-white">Private</span>
                 <br />
-                <span className="text-gradient">Journey Home</span>
+                <span className="text-gradient">Consultation</span>
               </h2>
               <div className="h-px w-20 bg-gold-500/50 mb-8" />
               <p className="text-white/50 text-lg leading-relaxed mb-12">
-                Whether you&apos;re seeking a penthouse in Manhattan or a villa
-                on the Côte d&apos;Azur, our advisors are ready to curate your
-                perfect match.
+                Every engagement begins with a confidential consultation. Share
+                your criteria and a senior advisor will respond within 24 hours
+                with a curated selection tailored to your requirements.
               </p>
 
               <div className="space-y-8">
@@ -131,6 +138,13 @@ export default function Contact() {
                     </p>
                   </div>
                 </div>
+
+                {/* Global offices */}
+                <div className="pt-6 border-t border-white/5">
+                  <p className="text-white/30 text-xs tracking-wider uppercase mb-4">
+                    Also in Monaco &middot; Dubai &middot; Los Angeles &middot; London
+                  </p>
+                </div>
               </div>
             </div>
           </ScrollReveal>
@@ -192,47 +206,121 @@ export default function Contact() {
                   </div>
                 </div>
 
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="text-white/50 text-sm block mb-2 tracking-wide">
+                      Preferred Location
+                    </label>
+                    <select
+                      value={formState.location}
+                      onChange={(e) =>
+                        setFormState({ ...formState, location: e.target.value })
+                      }
+                      className={selectClasses}
+                    >
+                      <option value="" className="bg-dark-900">Select market</option>
+                      <option value="manhattan" className="bg-dark-900">Manhattan, NY</option>
+                      <option value="malibu" className="bg-dark-900">Malibu / Pacific Palisades</option>
+                      <option value="monaco" className="bg-dark-900">Monaco / Côte d&apos;Azur</option>
+                      <option value="london" className="bg-dark-900">London / Mayfair</option>
+                      <option value="dubai" className="bg-dark-900">Dubai / Abu Dhabi</option>
+                      <option value="other" className="bg-dark-900">Other (specify below)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="text-white/50 text-sm block mb-2 tracking-wide">
+                      Budget Range
+                    </label>
+                    <select
+                      value={formState.budget}
+                      onChange={(e) =>
+                        setFormState({ ...formState, budget: e.target.value })
+                      }
+                      className={selectClasses}
+                    >
+                      <option value="" className="bg-dark-900">Select range</option>
+                      <option value="10-25" className="bg-dark-900">$10M &ndash; $25M</option>
+                      <option value="25-50" className="bg-dark-900">$25M &ndash; $50M</option>
+                      <option value="50-100" className="bg-dark-900">$50M &ndash; $100M</option>
+                      <option value="100+" className="bg-dark-900">$100M+</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="text-white/50 text-sm block mb-2 tracking-wide">
+                      Property Type
+                    </label>
+                    <select
+                      value={formState.propertyType}
+                      onChange={(e) =>
+                        setFormState({ ...formState, propertyType: e.target.value })
+                      }
+                      className={selectClasses}
+                    >
+                      <option value="" className="bg-dark-900">Select type</option>
+                      <option value="penthouse" className="bg-dark-900">Penthouse</option>
+                      <option value="townhouse" className="bg-dark-900">Townhouse</option>
+                      <option value="estate" className="bg-dark-900">Estate / Villa</option>
+                      <option value="waterfront" className="bg-dark-900">Waterfront</option>
+                      <option value="chateau" className="bg-dark-900">Château / Heritage</option>
+                      <option value="new-dev" className="bg-dark-900">New Development</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="text-white/50 text-sm block mb-2 tracking-wide">
+                      Move-In Timeframe
+                    </label>
+                    <select
+                      value={formState.timeframe}
+                      onChange={(e) =>
+                        setFormState({ ...formState, timeframe: e.target.value })
+                      }
+                      className={selectClasses}
+                    >
+                      <option value="" className="bg-dark-900">Select timeframe</option>
+                      <option value="immediate" className="bg-dark-900">Immediate</option>
+                      <option value="3-months" className="bg-dark-900">Within 3 months</option>
+                      <option value="6-months" className="bg-dark-900">Within 6 months</option>
+                      <option value="12-months" className="bg-dark-900">Within 12 months</option>
+                      <option value="exploring" className="bg-dark-900">Exploring options</option>
+                    </select>
+                  </div>
+                </div>
+
                 <div>
                   <label className="text-white/50 text-sm block mb-2 tracking-wide">
-                    Budget Range
+                    Acquisition Purpose
                   </label>
                   <select
-                    value={formState.budget}
+                    value={formState.purpose}
                     onChange={(e) =>
-                      setFormState({ ...formState, budget: e.target.value })
+                      setFormState({ ...formState, purpose: e.target.value })
                     }
-                    className="w-full bg-dark-900/50 border border-white/10 rounded-xl px-5 py-3.5 text-white focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/20 transition-all duration-300 appearance-none"
+                    className={selectClasses}
                   >
-                    <option value="" className="bg-dark-900">
-                      Select budget range
-                    </option>
-                    <option value="10-25" className="bg-dark-900">
-                      $10M - $25M
-                    </option>
-                    <option value="25-50" className="bg-dark-900">
-                      $25M - $50M
-                    </option>
-                    <option value="50-100" className="bg-dark-900">
-                      $50M - $100M
-                    </option>
-                    <option value="100+" className="bg-dark-900">
-                      $100M+
-                    </option>
+                    <option value="" className="bg-dark-900">Select purpose</option>
+                    <option value="primary" className="bg-dark-900">Primary Residence</option>
+                    <option value="secondary" className="bg-dark-900">Secondary / Vacation Home</option>
+                    <option value="investment" className="bg-dark-900">Investment Portfolio</option>
+                    <option value="relocation" className="bg-dark-900">Corporate Relocation</option>
+                    <option value="estate" className="bg-dark-900">Estate Planning</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="text-white/50 text-sm block mb-2 tracking-wide">
-                    Tell Us About Your Dream Home
+                    Additional Requirements
                   </label>
                   <textarea
                     value={formState.message}
                     onChange={(e) =>
                       setFormState({ ...formState, message: e.target.value })
                     }
-                    rows={4}
+                    rows={3}
                     className="w-full bg-dark-900/50 border border-white/10 rounded-xl px-5 py-3.5 text-white placeholder:text-white/20 focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/20 transition-all duration-300 resize-none"
-                    placeholder="I'm looking for a waterfront property with..."
+                    placeholder="Waterfront preferred, minimum 5 bedrooms, wine cellar..."
                   />
                 </div>
 
@@ -240,11 +328,12 @@ export default function Contact() {
                   type="submit"
                   className="btn-magnetic w-full py-4 bg-gold-500 text-dark-950 font-semibold text-sm rounded-xl tracking-wider uppercase hover:bg-gold-400 transition-all duration-300 animate-pulse-glow"
                 >
-                  {submitted ? "Request Received" : "Request Private Viewing"}
+                  {submitted ? "Request Received" : "Request Private Consultation"}
                 </button>
 
                 <p className="text-white/20 text-xs text-center">
-                  Your information is protected by our NDA policy
+                  Your information is protected under our NDA policy. All inquiries
+                  are handled exclusively by a senior advisor.
                 </p>
               </div>
             </form>

@@ -61,7 +61,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full glass-gold mb-8">
             <span className="w-2 h-2 rounded-full bg-gold-400 animate-pulse" />
             <span className="text-gold-300 text-sm tracking-widest uppercase">
-              Exclusive Collection 2026
+              Est. 1991 &middot; Licensed in NY, CA, FL, CT &middot; Monaco &middot; UAE
             </span>
           </div>
         </div>
@@ -86,24 +86,18 @@ export default function Hero() {
         </p>
 
         <div
-          className={`flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-1000 delay-500 ${
+          className={`transition-all duration-1000 delay-500 ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           <a
-            href="#properties"
-            className="btn-magnetic group relative px-8 py-4 bg-gold-500 text-dark-950 font-semibold text-sm rounded-full tracking-wider uppercase hover:bg-gold-400 transition-all duration-300 animate-pulse-glow"
+            href="#contact"
+            className="btn-magnetic group inline-flex items-center gap-3 px-10 py-4 bg-gold-500 text-dark-950 font-semibold text-sm rounded-full tracking-wider uppercase hover:bg-gold-400 transition-all duration-300 animate-pulse-glow"
           >
-            Explore Properties
-            <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">
+            Schedule Private Consultation
+            <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
               &rarr;
             </span>
-          </a>
-          <a
-            href="#about"
-            className="btn-magnetic px-8 py-4 border border-white/15 text-white/80 text-sm rounded-full tracking-wider uppercase hover:border-white/30 hover:text-white transition-all duration-300"
-          >
-            Our Story
           </a>
         </div>
 

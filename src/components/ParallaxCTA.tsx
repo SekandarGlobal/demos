@@ -57,23 +57,15 @@ export default function ParallaxCTA() {
         </ScrollReveal>
 
         <ScrollReveal delay={300}>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#contact"
-              className="btn-magnetic group px-10 py-4 bg-gold-500 text-dark-950 font-semibold text-sm rounded-full tracking-wider uppercase hover:bg-gold-400 transition-all duration-300 animate-pulse-glow"
-            >
-              Schedule Consultation
-              <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">
-                &rarr;
-              </span>
-            </a>
-            <a
-              href="tel:+12125550199"
-              className="btn-magnetic px-10 py-4 border border-white/15 text-white/80 text-sm rounded-full tracking-wider uppercase hover:border-white/30 hover:text-white transition-all duration-300"
-            >
-              Call +1 (212) 555-0199
-            </a>
-          </div>
+          <a
+            href="#contact"
+            className="btn-magnetic group inline-flex items-center gap-3 px-10 py-4 bg-gold-500 text-dark-950 font-semibold text-sm rounded-full tracking-wider uppercase hover:bg-gold-400 transition-all duration-300 animate-pulse-glow"
+          >
+            Schedule Private Consultation
+            <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+              &rarr;
+            </span>
+          </a>
         </ScrollReveal>
       </div>
     </section>
