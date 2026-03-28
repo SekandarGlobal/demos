@@ -31,7 +31,7 @@ const properties = [
     baths: 10,
     sqft: "22,000",
     image:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
     tag: "Exclusive",
   },
   {
@@ -42,7 +42,7 @@ const properties = [
     baths: 5,
     sqft: "9,800",
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80",
     tag: "Premium",
   },
   {
@@ -53,7 +53,7 @@ const properties = [
     baths: 9,
     sqft: "18,500",
     image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
+      "https://images.unsplash.com/photo-1600047509358-9dc75507daeb?w=800&q=80",
     tag: "Heritage",
   },
   {
@@ -64,7 +64,7 @@ const properties = [
     baths: 7,
     sqft: "14,200",
     image:
-      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
     tag: "Waterfront",
   },
 ];

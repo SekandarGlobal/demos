@@ -7,26 +7,52 @@ const testimonials = [
   {
     quote:
       "Aurelius found us a home that wasn&apos;t even on the market. Their network is unlike anything I&apos;ve experienced. The entire process felt effortless.",
-    name: "Alexandra Rothschild",
-    title: "Private Equity Partner",
+    name: "Caroline Ashford",
+    title: "Managing Partner, Ashford Capital",
     location: "New York, NY",
     rating: 5,
+    avatar:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80",
   },
   {
     quote:
-      "The level of discretion and professionalism is unmatched. They handled every detail of our Monaco acquisition with absolute precision.",
-    name: "James Whitmore III",
+      "The level of discretion and professionalism is unmatched. They handled every detail of our Monaco acquisition with absolute precision. Truly world-class.",
+    name: "Richard Pemberton",
     title: "Family Office Director",
     location: "London, UK",
     rating: 5,
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80",
   },
   {
     quote:
-      "After 20 years of working with luxury brokers, Aurelius stands alone. They don&apos;t just find properties — they find the right properties.",
-    name: "Sofia Chen-Nakamura",
-    title: "Tech Venture Capitalist",
+      "After two decades of working with luxury brokers across three continents, Aurelius stands alone. They don&apos;t just find properties — they find the right properties.",
+    name: "Mei-Lin Tanaka",
+    title: "Venture Capital Partner",
     location: "San Francisco, CA",
     rating: 5,
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=80",
+  },
+  {
+    quote:
+      "We needed a waterfront estate in under 60 days. Aurelius delivered three options — each one exceeding our expectations. The closing was seamless.",
+    name: "Henrik Johansson",
+    title: "CEO, NordTech Industries",
+    location: "Stockholm, Sweden",
+    rating: 5,
+    avatar:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&q=80",
+  },
+  {
+    quote:
+      "They understood our family&apos;s needs intuitively. The Beverly Hills estate they secured for us wasn&apos;t just a house — it was exactly the lifestyle we envisioned.",
+    name: "Priya Kapoor-Williams",
+    title: "Film Producer & Entrepreneur",
+    location: "Los Angeles, CA",
+    rating: 5,
+    avatar:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&q=80",
   },
 ];
 
@@ -104,14 +130,25 @@ export default function Testimonials() {
                   &ldquo;{testimonials[active].quote}&rdquo;
                 </blockquote>
 
-                <div>
-                  <p className="text-gold-400 font-semibold text-lg">
-                    {testimonials[active].name}
-                  </p>
-                  <p className="text-white/40 text-sm mt-1">
-                    {testimonials[active].title} &middot;{" "}
-                    {testimonials[active].location}
-                  </p>
+                <div className="flex flex-col items-center gap-3">
+                  {/* Avatar */}
+                  <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-gold-500/30 p-0.5">
+                    <div
+                      className="w-full h-full rounded-full bg-cover bg-center"
+                      style={{
+                        backgroundImage: `url('${testimonials[active].avatar}')`,
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <p className="text-gold-400 font-semibold text-lg">
+                      {testimonials[active].name}
+                    </p>
+                    <p className="text-white/40 text-sm mt-1">
+                      {testimonials[active].title} &middot;{" "}
+                      {testimonials[active].location}
+                    </p>
+                  </div>
                 </div>
               </div>
 
